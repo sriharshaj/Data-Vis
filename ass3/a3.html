@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 3</title>
+  <link rel="stylesheet" type="text/css" href="a3.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  <script
+    src="https://gist.githubusercontent.com/dakoop/69c31771a040f8be86d73e7b31de6528/raw/daf94ffbe5ff7740cd92e4f5691a33b05a4ecc1b/ma-towns.json"
+    type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.js"></script>
+</head>
+
+<body>
+  <div id="info">
+    <div class="left">
+      <h1>Sri Harsha Jujjavarapu</h1>
+      <h2>01787250</h2>
+    </div>
+    <div class="right">
+      <h3>Data Visualization (DSC 530/CIS 568)</h3>
+      <h4>Assignment 3</h4>
+    </div>
+  </div>
+  <div style="text-align:center">
+    <p>This assignment is all my own work. I did not copy the code from any other source.</p>
+    <p>I used this code as reference for drawing Overlay map <a href="http://bl.ocks.org/shimizu/749df041c1945aef78fd992c7dfbe0e1" target="_blank">Reference</a></p>
+  </div>
+  <h1>MA Towns Map</h1>
+  <div id="towns-map">
+  </div>
+
+  <h1>MA Housing Affordability ($30k+)</h1>
+  <div id="towns-30k"></div>
+
+  <h1>MA Housing Affordability ($80k+)</h1>
+  <div id="towns-80k"></div>
+
+  <h1>MA Overlay</h1>
+  <div id="towns-overlay"></div>
+
+  <h1>Extra Credit: MA Housing Affordability (Interactive)</h1>
+  <div id="towns-allk">
+    <div id="controls">
+      <label for="day">Income:</label>
+      $10,000
+      <input type="range" id="day" min="0" max="11" value="0" onchange="changeAffordability(this.value)">
+      $120,000 or more
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="a3.js" type="text/javascript"></script>
+</body>
+
+</html>

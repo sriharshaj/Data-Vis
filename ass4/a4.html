@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment #4</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.4/nouislider.min.css"/>
+  <link rel="stylesheet" type="text/css" href="a4.css">
+  <style type="text/css">
+    #linked {
+      display: flex;
+      align-items: center;
+    }
+
+    #linked .map {
+      float: left;
+    }
+
+    #controls {
+      width: 300px;
+      margin-left: 100px;
+    }
+
+    #controls .noUi-value-large {
+      margin-top: 5px;
+    }
+
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.4/nouislider.min.js"></script>
+</head>
+<body>
+  <div id="info">
+    <div class="left">
+      <h1>Sri Harsha Jujjavarapu</h1>
+      <h2>01787250</h2>
+    </div>
+    <div class="right">
+      <h3>Data Visualization (DSC 530/CIS 568)</h3>
+      <h4>Assignment 4</h4>
+    </div>
+  </div>
+  <div style="text-align:center">
+    <p>This assignment is all my own work. I did not copy the code from any other source.</p>
+  </div>
+  <h1>MA Housing Affordability ($60k+)</h1>
+  <div id="towns-30k">
+    Population:
+    <div id="controls"> </div>
+  </div>
+
+  <h1>MA Subsidized Histogram</h1>
+  <div id="towns-hist"></div>
+
+  <h1>MA Linked Highlighting</h1>
+  <div id="linked">
+    <div class="map"></div>
+    <div class="hist"></div>
+  </div>
+
+  <!-- Make sure everything is loaded before defining JavaScript. -->
+  <script type="text/javascript" src="a4.js"></script>
+</body>
+</html>

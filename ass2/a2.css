@@ -1,0 +1,17 @@
+#info{
+  display: flex;
+  justify-content: space-between;
+}
+#info > .left{
+  color: red;
+  border: 3px solid green;
+  border-radius: 5px;
+  padding: 10px;
+}
+#info > .right{
+  text-align: right;
+  font-style: italic;
+}
+#info > .right h3, h4{
+  font-weight: normal;
+}

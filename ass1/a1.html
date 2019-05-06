@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 1</title>
+  <link rel="stylesheet" type="text/css" href="a1.css">
+  <script src="https://cdn.rawgit.com/dakoop/c1f4371ff9c249ce1373f35bb8e32d32/raw/2960b6f93c0c65ddfc1cbe5aaba8179ec4ea4bf1/bikeData.js"
+    type="text/javascript"></script>
+  <script src="a1.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="info">
+    <div class="left">
+      <h1>Sri Harsha Jujjavarapu</h1>
+      <h2>01787250</h2>
+    </div>
+    <div class="right">
+      <h3>Data Visualization (DSC 530/CIS 568)</h3>
+      <h4>Assignment 1</h4>
+    </div>
+  </div>
+  <br />
+  <svg id="house" width="250" height="250">
+    <polygon points="0,50 125,0 250,50" fill="#041C6E" />
+    <rect x="25" y="50" width="200" height="200" fill="#F91628" />
+    <rect x="45" y="120" width="60" height="60" fill="#fff" />
+    <rect class="door" x="145" y="100" width="60" height="150" fill="#B0B7BC" />
+    <circle cx="152" cy="170" r="5" />
+  </svg>
+  <div id="barchart">
+  </div>
+  <div id="controls">
+    <label for="day">Day:</label>
+    1
+    <input type="range" id="day" min="1" max="31" value="1" onchange="highlightDay(this.value)">
+    31
+  </div>
+</body>
+
+</html>

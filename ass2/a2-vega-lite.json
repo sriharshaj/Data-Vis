@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "width": 350,
+  "data": {
+      "url": "https://gitcdn.xyz/cdn/dakoop/722724236876db13af3c7f3f11e7eee4/raw/9e7073bf3a943c514ca61aedc9865c616c9d77da/bikeData.json"
+  },
+  "transform": [
+      {
+          "calculate": "datum[70]+datum[80]+datum[90]+datum[100]+datum[110]+datum[120]+datum[130]",
+          "as": "70+"
+      },
+      {
+          "fold": [
+              "10",
+              "20",
+              "30",
+              "40",
+              "50",
+              "60",
+              "70+"
+          ]
+      }
+  ],
+  "mark": "bar",
+  "encoding": {
+      "x": {
+          "field": "day",
+          "type": "nominal",
+          "axis": {
+              "title": "Day"
+          }
+      },
+      "y": {
+          "aggregate": "sum",
+          "field": "value",
+          "type": "quantitative",
+          "axis": {
+              "title": "Number of Bike Trips",
+              "tickStep": 10000
+          }
+      },
+      "color": {
+          "field": "key",
+          "type": "nominal",
+          "legend": {
+              "title": "Age Ranges"
+          },
+          "scale":{
+              "range": ["#F3D06E", "#C0C464", "#8FB75D", "#62A55A", "#469253", "#327E48", "#1A6B38"]
+          }
+      }
+  }
+}
